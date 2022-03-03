@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="password-wrapper">
-        <h2 class="password">Your password will be displayed here</h2>
-        <button onclick="modifyPasswordField()" class="generate">GENERATE !</button>
+      <h2 class="password">Your password will be displayed here</h2>
+      <button onclick="modifyPasswordField()" class="generate">GENERATE !</button>
     </div>
 
     <fieldset class="settings">
-        <legend class="settings__title">Settings Box</legend>
-        <div class="input-wrapper">
-            <label>Length (min 8 / max 50) :</label>
-            <input class="characters-number" type="number" min="8" max="50">
-        </div>
-        <div class="input-wrapper">
-            <label>Include uppercases :</label>
-            <input class="checkbox include-uppercases" type="checkbox">
-        </div>
-        <div class="input-wrapper">
-            <label>Include numbers :</label>
-            <input class="checkbox include-numbers" type="checkbox">
-        </div>
-        <div class="input-wrapper">
-            <label>Include symbols :</label>
-            <input class="checkbox include-symbols" type="checkbox" min="8" max="50">
-        </div>
+      <legend class="settings__title">Settings Box</legend>
+
+      <div class="input-wrapper">
+        <label>Length (min 8 / max 50) :</label>
+        <input class="characters-number" type="number" min="8" max="50">
+      </div>
+
+      <div class="input-wrapper">
+        <label>Include uppercases :</label>
+        <input class="checkbox include-uppercases" type="checkbox">
+      </div>
+
+      <div class="input-wrapper">
+        <label>Include numbers :</label>
+          <input class="checkbox include-numbers" type="checkbox">
+      </div>
+
+      <div class="input-wrapper">
+        <label>Include symbols :</label>
+        <input class="checkbox include-symbols" type="checkbox" min="8" max="50">
+      </div>
     </fieldset>
-</body>
-<script src="scripts/script.js"></script>
+  </body>
+
+  <script src="scripts/script.js"></script>
 </html>
