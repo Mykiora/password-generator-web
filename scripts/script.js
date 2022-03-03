@@ -30,12 +30,30 @@ function generateRandomNumber(min = 0, max = 100) {
  */
 function generatePassword() {
     let password = [];
-    let lowerCaseChar = generateCharacters(97, 122);
-    let numberOfCharacters = document.querySelector('.characters-number').value;
+    let characters = generateCharacters(97, 122);
+    // unicodeRanges -> [[uppercases], [numbers], [symbols]]
+    const unicodeRanges = [[65, 90], [48, 57], [33, 47]]; 
+    const checkboxes = document.querySelectorAll('.checkbox');
+    let checkboxesState = '';
+    const numberOfCharacters = document.querySelector('.characters-number').value;
     
+    for (i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            checkboxesState += '1';  
+        } else {
+            checkboxesState += '0';
+        }
+    }
+
+    for (i = 0; i < checkboxesState.length; i++) {
+        if (checkboxesState[i] === '1') {
+            characters = characters.concat(generateCharacters(unicodeRanges[i][0], unicodeRanges[i][1]));
+        }
+    }
+
     for (let i = 0; i < numberOfCharacters; i++) {
-        let randomNumber = generateRandomNumber(0, lowerCaseChar.length);
-        password.push(lowerCaseChar[randomNumber]);
+        let randomNumber = generateRandomNumber(0, characters.length);
+        password.push(characters[randomNumber]);
     }
     
     return password.join('');
