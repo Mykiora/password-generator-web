@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="password-wrapper">
+        <h2 class="password">Your password will be displayed here</h2>
+        <button onclick="modifyPasswordField()" class="generate">GENERATE !</button>
+    </div>
+
+    <fieldset class="settings">
+        <legend class="settings__title">Settings Box</legend>
+        <div class="input-wrapper">
+            <label>Length (min 8 / max 50) :</label>
+            <input class="characters-number" type="number" min="8" max="50">
+        </div>
+    </fieldset>
+</body>
+<script src="scripts/script.js"></script>
+</html>
