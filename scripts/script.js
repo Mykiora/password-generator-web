@@ -70,7 +70,7 @@ modifyPasswordField = function (password) {
 
     switch(numberOfCharacters.length) {
         case 0:
-            passwordField.innerText = 'Number of characters field cannot be empty';
+            passwordField.innerText = 'Length field cannot be empty';
             break;
         default:
             passwordField.innerText = password;
