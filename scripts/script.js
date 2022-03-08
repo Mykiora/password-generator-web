@@ -84,7 +84,7 @@ function copyToClipboard() {
     navigator.clipboard.writeText(textToCopy);
 
     copyButtonText.setAttribute('style', 'color: #44c603');
-    copyButtonText.innerText = 'Copied !';
+    copyButtonText.innerText = 'copied !';
 
     setTimeout(function() {
         copyButtonText.setAttribute('style', 'color: white');
