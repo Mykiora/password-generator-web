@@ -8,31 +8,32 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <div class="password-wrapper">
+    <div class="flex-container password-wrapper">
       <h2 class="password">Your password will be displayed here</h2>
+      <h2 class="copy-password" onclick="copyToClipboard()">Copy to clipboard</h3>
       <button onclick="modifyPasswordField()" class="generate">GENERATE !</button>
     </div>
 
-    <fieldset class="settings">
+    <fieldset class="flex-container settings">
       <legend class="settings__title">Settings Box</legend>
 
-      <div class="input-wrapper">
-        <label>Length (min 8 / max 50) :</label>
+      <div class="flex-container input-wrapper">
+        <label>Length (min 8 / max 50)</label>
         <input class="characters-number" type="number" min="8" max="50">
       </div>
 
-      <div class="input-wrapper">
-        <label>Include uppercases :</label>
+      <div class="flex-container input-wrapper">
+        <label>Include uppercases</label>
         <input class="checkbox include-uppercases" type="checkbox">
       </div>
 
-      <div class="input-wrapper">
-        <label>Include numbers :</label>
+      <div class="flex-container input-wrapper">
+        <label>Include numbers</label>
           <input class="checkbox include-numbers" type="checkbox">
       </div>
 
-      <div class="input-wrapper">
-        <label>Include symbols :</label>
+      <div class="flex-container input-wrapper">
+        <label>Include symbols</label>
         <input class="checkbox include-symbols" type="checkbox" min="8" max="50">
       </div>
     </fieldset>
