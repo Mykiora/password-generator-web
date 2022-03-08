@@ -1,13 +1,17 @@
-/* GENERAL RULES */
+/*
+    1) GENERAL RULES
+    2) PASSWORD
+    3) SETTINGS
+    4) MEDIA QUERIES
+    
+ */
+
+/* 1) GENERAL RULES */
 
 * {
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-html {
-    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
 }
 
 body, html {
@@ -17,135 +21,139 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 4rem;
-    background-color: rgb(10, 92, 185);
-    color: whitesmoke;
+    font-family: 'roboto', sans-serif;
+    color: white;
+    background-color: rgb(31, 80, 170);
 }
 
-label {
-    font-size: 2.5rem;
+button {
+    padding: 10px;
+    border: none;
+    outline: solid white 2px;
+    font-weight: bold;
+    font-family: 'roboto', sans-serif;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 10px 8px white;
+}
+
+.flex-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 input[type="checkbox"] {
-    margin-left: 20px;
     appearance: none;
-    height: 20px;
     width: 20px;
-    background-image: linear-gradient(to bottom, white, rgb(179, 179, 179));
+    height: 20px;
+    background-color: white;
+    transition: 0.3s;
     cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
-    background-image: linear-gradient(to bottom, rgb(10, 92, 185), rgb(179, 179, 179));
+    background-color: rgb(80, 141, 255);
 }
 
-/* PASSWORD CONTAINER */
+/* 2) PASSWORD */
 
 .password-wrapper {
-    margin-bottom: 10%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
     align-items: center;
-}
-
-.password {
+    justify-content: center;
+    word-break: break-all;
     text-align: center;
-    word-wrap: break-word;
-    width: 100vw;
-    padding: 1em;
+    background-color: rgb(31, 80, 170);
 }
 
-.generate {
-    padding: 0.7em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 3rem;
-    border: 3px solid white; 
-    border-radius: 40px;          
-    color: white;
-    background-color: transparent;
+.copy-password {
+    margin: 10px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
-.generate:hover {
-    box-shadow: 0 0 10px 7px white;
-    background-color: rgb(9, 56, 110);
-}
-
-/* SETTINGS BOX */
+/* 3) SETTINGS */
 
 .settings {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    text-align: center;
-    height: 40vh;
-    border-top-color: white;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    background-color: black;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: solid white 2px;
+    background-color: rgb(34, 34, 34);
 }
 
 .settings__title {
-    padding: 0.5em;
-    background-color: rgb(8, 58, 116);
-    border: solid white 2px;
-    user-select: none;
+    padding: 1em;
+    text-align: center;
+    background-color: black;
+    border: solid 2px white;
 }
 
 .input-wrapper {
-    display: flex;
-    height: fit-content;
+    flex-direction: row;
     align-items: center;
-    padding: 0.5em;
+    width: 100%;
 }
 
 .characters-number {
-    margin-left: 20px;
-    padding: 0em 0.5em;
-    font-size: 2rem;
-    font-weight: bold;
+    margin-left: 10px;
+    padding: 0.3em;
+    border-radius: 0;
     border: none;
     outline: none;
-    background-image: linear-gradient(to bottom, white, rgb(179, 179, 179));
+    font-weight: bold;
+    font-family: 'roboto', sans-serif;
 }
 
-/* MEDIA QUERIES */
-
-@media (max-width: 700px) {
-    *, label {
-        font-size: 2rem;
-    }
-
-    .password-wrapper {
-        margin-bottom: 20%;
-    }
-
-    .password {
-        width: 90vw;
-    }
-
-    .generate {
-        margin: 0;
-    }
+.include-uppercases {
+    margin-left: 10px;
 }
 
-@media (min-width: 701px) and (max-width: 1280px) {
-    *, label {
-        font-size: 3rem;
-    }
-
-    .password-wrapper {
-        margin-bottom: 20%;
-    }
+.include-numbers {
+    margin-left: 27px;
 }
 
+.include-symbols {
+    margin-left: 29px;
+}
+
+.checkbox {
+    padding: 10px 0;
+}
+
+/* 4) MEDIA QUERIES */
+
+@media (min-width: 1200px) {
+    body, button, input {
+        font-size: 1.5rem;
+    }
+
+    .copy-password {
+        margin: 30px;
+    }
+
+    input[type="checkbox"] {
+        width: 40px;
+        height: 40px;
+    }
+
+    .include-uppercases {
+        margin-left: 20px;
+    }
+    
+    .include-numbers {
+        margin-left: 47px;
+    }
+    
+    .include-symbols {
+        margin-left: 50px;
+    }
+}
