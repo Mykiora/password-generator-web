@@ -12,9 +12,12 @@ Nothing crazy actually. Does what the title states. For now, it is quite limited
 ### 3-03-2022 but a bunch of hours later
 Include uppercases, include numbers and include symbols functionalities added ! I also noticed that I have some issues with responsive, so once I'll be done for good with main functions I will probably have to fix that.
 
+### 8-03-2022
+Since I have had poorly managed the CSS, I deleted the file and started writing it again from the beginning. All responsive-relative problems are now solved, and I also added the copy to clipboard functionality.
+
 ## Most important Functionalities to implement
 - Possibility to include uppercase characters [X] done
 - Possibility to include numbers [X] done
 - Possibility to include symbols [X] done
-- Add a button to copy the password [ ]
-- Redo CSS to fix responsive issues [ ]
+- Add a button to copy the password [X] done
+- Redo CSS to fix responsive issues [X] done
