@@ -1,5 +1,5 @@
 /**
- * Generates an array of characters from the unicode table in a given range
+ * Generate an array of characters from the unicode table in a given range
  * @param {number} start Where the range begins
  * @param {number} end Where the range ends
  * @returns {object} Array containing the characters
@@ -15,7 +15,7 @@ function generateCharacters(start, end) {
 }
 
 /**
- * Generates a random integer inside a given range
+ * Generate a random integer inside a given range
  * @param {number} min Minimum value -> default is 0
  * @param {number} max Maximum value -> default is 100
  * @returns {number}
@@ -60,7 +60,7 @@ function generatePassword() {
 }
 
 /**
- * Replaces the default password field in the page with the generated password
+ * Replace the default password field in the page with the generated password
  * @param {string} password The generated password 
  */
 modifyPasswordField = function (password) {
@@ -77,3 +77,17 @@ modifyPasswordField = function (password) {
             break;
     }
 };
+
+function copyToClipboard() {
+    var textToCopy = document.querySelector('.password').innerText;
+    var copyButtonText = event.target;
+    navigator.clipboard.writeText(textToCopy);
+
+    copyButtonText.setAttribute('style', 'color: #44c603');
+    copyButtonText.innerText = 'Copied !';
+
+    setTimeout(function() {
+        copyButtonText.setAttribute('style', 'color: white');
+        copyButtonText.innerText = 'copy to clipboard';
+    }, 1000);
+}
