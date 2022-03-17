@@ -1,6 +1,8 @@
 # Password Generator
 Password generator created with HTML, CSS and Javascript
 
+![password-generator](https://user-images.githubusercontent.com/90429463/158879467-78b37154-9e67-45a4-ac49-396cfdb98248.jpg)
+
 ## How to use it
 All you have to do is to download the directory and you are ready to go. Open the index.html, adjust the settings as you like then click the big "Generate !" button.
 
