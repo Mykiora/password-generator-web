@@ -2,6 +2,8 @@
 
 Générateur de mots de passes créé avec HTML, CSS et Javascript
 
+![password-generator](https://user-images.githubusercontent.com/90429463/158879467-78b37154-9e67-45a4-ac49-396cfdb98248.jpg)
+
 ## Comment l'utiliser
 
 Tout ce que vous avez à faire est de télécharger le dossier et vous êtes prêts. Ouvrez index.html, ajustez les paramètres comme vous en avez envie, puis cliquez sur le bouton "Generate !".
